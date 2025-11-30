@@ -1,0 +1,114 @@
+<!-- Happy Birthday to Bhumi-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday!</title>
+<style>
+    body {
+        margin: 0;
+        background: #1a1a2e;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-top: 40px;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px #ff7bd4, 0 0 20px #ff7bd4; }
+        100% { text-shadow: 0 0 20px #ff00c8, 0 0 40px #ff00c8; }
+    }
+
+    .photo-container {
+        margin-top: 30px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .photo-container img {
+        width: 270px;
+        height: 270px;
+        object-fit: cover;
+        border-radius: 25px;
+        box-shadow: 0 0 20px #ffb3f6;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
+    }
+
+    .msg {
+        margin-top: 25px;
+        font-size: 24px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Magical glowing particles */
+    .particle {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: radial-gradient(circle, #ff6bff, #ff00e1);
+        border-radius: 50%;
+        animation: rise 6s ease-in infinite;
+        opacity: 0.8;
+    }
+
+    @keyframes rise {
+        0% { transform: translateY(0) scale(0.5); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-800px) scale(1.4); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<h1>🎂 Happy Birthday! 🎉</h1>
+
+<div class="photo-container">
+    <!-- INSERT YOUR FRIEND'S PHOTO LINK HERE -->
+    <img src="Bhumi1.jpg" alt="Bhumi1">
+</div>
+
+<p class="msg">
+    Wishing you a magical year ahead!  
+    May your future will be filled with smiles, surprises, sparkles and endless joy.  
+    May you fullfill your and you parents dreams,
+    You deserve all the happiness in the universe ✨💖
+    Once more Happy Birthday to you bhumi (vedi) 💕🫂
+</p>
+
+<script>
+    // Generate magical particles
+    function createParticle() {
+        const p = document.createElement("div");
+        p.classList.add("particle");
+        p.style.left = Math.random() * window.innerWidth + "px";
+        p.style.bottom = "-10px";
+        p.style.animationDuration = 4 + Math.random() * 4 + "s";
+        p.style.transform = scale($,{0.5 :+ Math.random()});
+        document.body.appendChild(p);
+
+        setTimeout(() => { p.remove(); }, 7000);
+    }
+
+    setInterval(createParticle, 200);
+</script>
+
+</body>
+</html>
